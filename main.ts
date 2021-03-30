@@ -1,213 +1,177 @@
 function Stage2open () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
+    range.clear()
     basic.pause(300)
-    strip2.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    range2.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(300)
-    strip2.clear()
+    range2.clear()
     basic.pause(300)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
-    strip2.clear()
+    range.clear()
+    range2.clear()
     basic.clearScreen()
 }
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 50) {
         Player1 = 1
+        basic.showString("P1")
+        if (Player_2 == 1) {
+            Stage1Move()
+        }
     }
     if (receivedNumber == 51) {
         Player_2 = 1
-    }
-    if (receivedNumber == 52) {
-        Player_3 = 1
-        Stage1Move()
+        basic.showString("P2")
+        if (Player1 == 1) {
+            Stage1Move()
+        }
     }
     if (receivedNumber == 10) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P1 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 20) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P2 WON")
-        strip.clear()
-        strip2.clear()
-        radio.setGroup(25)
-    }
-    if (receivedNumber == 30) {
-        radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
-        basic.pause(2000)
-        basic.showString("P3 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
+        basic.clearScreen()
         radio.setGroup(25)
     }
     if (receivedNumber == 11) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P1 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 21) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P2 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
-    }
-    if (receivedNumber == 31) {
-        radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
-        basic.pause(2000)
-        basic.showString("P3 WON")
-        strip.clear()
-        strip2.clear()
-        radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 12) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P1 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 22) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P2 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
-    }
-    if (receivedNumber == 32) {
-        radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
-        basic.pause(2000)
-        basic.showString("P3 WON")
-        strip.clear()
-        strip2.clear()
-        radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 13) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P1 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
+        basic.clearScreen()
     }
     if (receivedNumber == 23) {
         radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
+        range.showColor(neopixel.colors(NeoPixelColors.Green))
+        range2.showColor(neopixel.colors(NeoPixelColors.Green))
         basic.pause(2000)
         basic.showString("P2 WON")
-        strip.clear()
-        strip2.clear()
+        range.clear()
+        range2.clear()
         radio.setGroup(25)
-    }
-    if (receivedNumber == 33) {
-        radio.setGroup(69)
-        strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip2.showColor(neopixel.colors(NeoPixelColors.Green))
-        basic.pause(2000)
-        basic.showString("P3 WON")
-        strip.clear()
-        strip2.clear()
-        radio.setGroup(25)
+        basic.clearScreen()
     }
 })
 function Stage4open () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
+    range.clear()
     basic.pause(300)
-    strip2.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    range2.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(300)
-    strip2.clear()
+    range2.clear()
     basic.pause(300)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
-    strip2.clear()
+    range.clear()
+    range2.clear()
     basic.clearScreen()
 }
-function stage_5 () {
-    radio.sendNumber(1)
-    basic.showString("A ")
-    basic.pause(1000)
-    basic.showString("A ")
-    basic.pause(1000)
-}
 function Stage3Open () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
+    range.clear()
     basic.pause(300)
-    strip2.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    range2.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(300)
-    strip2.clear()
+    range2.clear()
     basic.pause(300)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
-    strip2.clear()
+    range.clear()
+    range2.clear()
     basic.clearScreen()
 }
 function Stage1Move () {
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
+    range.clear()
     basic.pause(300)
-    strip2.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    range2.showColor(neopixel.colors(NeoPixelColors.Yellow))
     basic.pause(300)
-    strip2.clear()
+    range2.clear()
     basic.pause(300)
-    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    range.showColor(neopixel.colors(NeoPixelColors.Red))
     basic.pause(300)
-    strip.clear()
-    strip2.clear()
+    range.clear()
+    range2.clear()
     basic.clearScreen()
 }
-let Player_3 = 0
 let Player_2 = 0
 let Player1 = 0
-let strip2: neopixel.Strip = null
-let strip: neopixel.Strip = null
+let range2: neopixel.Strip = null
+let range: neopixel.Strip = null
 let TEMP = ""
 basic.showString("?")
 // Change
-strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
-// Change
-strip2 = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
+range = strip.range(0, 12)
+range2 = strip.range(12, 24)
 radio.setGroup(25)
 let Stage1Com = "ABA"
 let Stage2Com = "BAB"
